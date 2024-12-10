@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+<!-- Fonts -->
+<!--
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<style>
+    /* Global Styles */
+    body {
+            font-family: 'Roboto Serif', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+    /* Navbar Styling */
+    nav {
+            width: 100%;
+            background-color: rgba(229, 230, 230, 0.7);
+            backdrop-filter: blur(10px);
+            transition: background-color 0.3s, backdrop-filter 0.3s;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #5d796a;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: rgba(229, 230, 230, 0.9);
+            border-radius: 5px;
+        }
+    
+    /*-------------------Contact Us Page----------------------------------------*/
+
+.contact-Us-outer{
+    width: 100%;
+    height: 400px;
+    /*border: 1px solid red;*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.contact-Us-outer-left{
+    width: 50vw;
+    height: 400px;
+    /*border: 2px solid rgb(8, 2, 63);*/
+    flex: 1;
+    justify-content: center;
+    padding: 10px 20px;
+}
+
+.contact-Us-outer-right{
+    width: 50vw;
+    height: 400px;
+    /*border: 2px solid rgb(2, 41, 7);*/
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.contact-Us-outer-left>h2,.contact-Us-outer-right-header>h2{
+    color: rgb(27, 2, 116);
+    font-weight: bolder;
+    
+}
+
+.contact-item {
+    text-decoration: none;
+    color: #333; /* Adjust color to fit your design */
+    font-size: 18px; /* Adjust font size */
+    display: flex;
+    align-items: center;
+    margin: 10px 0; /* Add some spacing */
+}
+
+.contact-item i {
+    margin-right: 8px; /* Space between icon and text */
+    color: #007bff; /* Icon color (blue in this case) */
+}
+
+.contact-item:hover {
+    color: #007bff; /* Hover effect */
+    cursor: pointer;
+}
+
+.contact-Us-outer-right-header{
+    height: 40px;
+    width: 50vw;
+    /*border: 2px solid red;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-Us-outer-right-footer{
+    height: 400px;
+    width: 50vw;
+    /*border: 2px solid red;*/
+}
+
+.get-in-outer{
+    height: 400px;
+    width: 50%;
+    /*border: 3px solid red;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 300px;
+    right: 300px;
+    margin-top: 20px;
+}
+
+.get-in-outer-header{
+    height: 40px;
+    width: 100%;
+    /*border: 2px solid rgb(20, 2, 48);*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.get-in-outer-footer{
+    height: 400px;
+    width: 100%;
+   /* border: 3px solid rgb(1, 43, 8);*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+input[type="submit"] {
+    background-color: #00b894;  /* Green background */
+    color: white;               /* White text */
+    padding: 10px 20px;         /* Padding around the button */
+    border: none;               /* Remove border */
+    cursor: pointer;            /* Hand pointer on hover */
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: #022b22;  /* Darker green when hovered */
+}
+
+/* Footer Styling */
+footer {
+            background-color: #333; /* Changed from #333 to a lighter color */
+            color: rgb(248, 244, 244); /* Updated text color for better contrast */
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 50px;
+        }
+
+        footer .social-icons {
+            margin: 10px 0;
+        }
+
+        footer .social-icons a {
+            color: rgb(11, 173, 160); /* Changed from white to match the overall color scheme */
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+
+        footer .social-icons a:hover {
+            color: #FFD700;
+        }
+
+        footer p {
+            margin: 10px 0 0;
+            font-size: 0.9em;
+        }
+
+
+
+/*-------------------Contact Us Page----------------------------------------*/
+
+ </style>
+
+</head>
+<body>
+  <!-- Header Section -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="aboutUs.html">About Us</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="contact.html">Contact Us</a>
+</nav>
+<!-- Header Section -->
+ 
+<!-----------------contact us section----------------------------->
+<div class="contact-Us-outer">
+    <div class="contact-Us-outer-left">
+    <h2>Contact Us on</h2>
+    <!-- Phone number with icon -->
+<div>
+    <a href="tel:+1234567890" class="contact-item">
+        <i class="fa fa-phone"></i> +6019-676-4038
+    </a>
+</div>
+
+<!-- Email address with icon -->
+<div>
+    <a href="mailto:example@email.com" class="contact-item">
+        <i class="fa fa-envelope"></i> i23023820@student.newinti.edu.my
+    </a>
+</div>
+    
+    <br>
+    <h2>Our Address:</h2>
+    <h5>INTI International University</h5>
+    <h5>Persiaran Perdana BBN Putra Nilai, 71800 Nilai, Negeri Sembilan</h5>
+    <h5>Nilai</h5>
+</div>
+<div class="contact-Us-outer-right">
+    <div class="contact-Us-outer-right-header">
+        <h2>Find Us On</h2>
+    </div>
+    <div class="contact-Us-outer-right-footer">
+        <div style="width: 100%"><iframe width="100%" height="360" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=INTI%20International%20University,persian%20perdana,BBN,negeri%20sembilan,nilai+(Your%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/sport-gps/">bike gps</a></iframe></div>
+
+    </div>  
+</div>
+</div>
+
+  <!-----------------contact us section----------------------------->
+
+<!-----------------Get in touch  section----------------------------->
+<div class="get-in-outer">
+    <div class="get-in-outer-header">
+        <h2>Get in Touch</h2>
+    </div>
+    <div class="get-in-outer-footer">
+        <form action="submit_contact.php" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" placeholder="Enter your name" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" placeholder="abc@gmail.com" id="email" name="email" required ><br><br>
+
+            <label for="contact_number">Contact Number:</label><br>
+            <input type="number" placeholder="0191234567" id="contact_number" name="contact_number" required><br><br>
+            
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            
+            
+            <input type="submit" value="Submit">
+
+        </form>
+
+    </div>
+
+
+</div>
+    
+<!-----------------Get in touch  section----------------------------->
+
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2024 Our Portfolio.All rights reserved.</p>
+    </footer>
+    <!-- Footer Section -->
+</body>
+</html>
+
+</body>
+</html>

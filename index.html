@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Our Portfolio-Home</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f7f7f7;
+            color: #444;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+			background-image: url('asserts/front-2.png'); 
+			background-size: cover;
+			background-position: center;
+			color: white;
+			text-align: center;
+			padding: 200px 20px;
+			font-family: 'Cookie', cursive; /* Use the Cookie font here */
+		}
+
+		header h1 {
+			font-size: 6em;
+			margin: 0;
+			font-family: 'Cookie', cursive; /* Use the Cookie font here */
+		}
+
+        nav {
+            width: 100%;
+            background-color: rgba(229, 230, 230, 0.7);
+            backdrop-filter: blur(10px);
+            transition: background-color 0.3s, backdrop-filter 0.3s;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #5d796a;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: rgba(229, 230, 230, 0.7);
+        }
+        main {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-items: center;
+        }
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+            max-width: 100%;
+        }
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card h3 {
+            margin: 10px 0;
+            padding: 0 15px;
+            font-size: 1.2em;
+        }
+        .card p {
+            padding: 0 15px 15px;
+            color: #777;
+            font-size: 0.9em;
+        }
+        footer {
+            background-color: #333;
+            color: rgb(248, 244, 244);
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 50px;
+        }
+        footer .social-icons {
+            margin: 10px 0;
+        }
+        footer .social-icons a {
+            color: rgb(11, 173, 160);
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+        footer .social-icons a:hover {
+            color: #FFD700;
+        }
+        footer p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+        }
+
+        /* About Section */
+        #about {
+            background-color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        #about h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        #about p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #666;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: #f0f0f0;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        #contact h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        #contact form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        #contact form input, #contact form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1em;
+        }
+        #contact form button {
+            width: 100%;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #contact form button:hover {
+            background-color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .image-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+            header {
+                padding: 100px 20px;
+            }
+            header h1 {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header id="home">
+    <h1>Welcome to Our Portfolio</h1>
+</header>
+
+<nav>
+    <a href="index.html"><b>Home</b></a>
+    <a href="aboutUs.html"><b>About Us</b></a>
+    <a href="portfolio.html"><b>Portfolio</b></a>
+    <a href="contact.html"><b>Contact Us</b></a>
+</nav>
+
+<!-- About Section -->
+<section id="about" class="about-container">
+    <div class="about-text">
+        <h2>About Us</h2>
+        <p>
+            Hello there! We are a grooup of student from RAD Class. Our Team has 4 members. <br>
+			They are Wong Jing En, Ou Yang Jia Wen, Lahiru Madushan, Jiexu. We did this <br>
+			assignment by using HTML5, CSS, JavaScript, Database and hosted <br>
+			as a live website. Our goal is to create a user-friendly platform to <br>
+			showcase each member’s portfolio in an accessible and organized way.<br><br>
+			In the “About Us” section, you’ll find detailed information about each member, <br>
+			including their name, age, country, and skill set. Once you're done <br>
+			exploring, we invite you to check out the "Portfolio" section, where <br>
+			we proudly present our past projects. These range from basic HTML creations <br>
+			to more advanced work, such as Java Derby applications, and much more!<br><br>
+			On the "Contact Us" page, we have provided multiple ways for you to <br>
+			reach out. You’ll find our phone number and physical address if you prefer<br>
+			direct communication. However, if you’re more comfortable with written <br>
+			communication or need to discuss something in detail, we've also included an <br>
+			email option. For your convenience, we’ve designed a simple contact <br>
+			form where you can enter your name, email address, phone number, and message. O<br>
+			nce submitted, your information is securely stored in our database, <br>
+			and we’ll be able to review it and get back to you promptly. Whether <br>
+			you prefer a quick call or a more in-depth email exchange, we're here to help!<br><br>
+        </p>
+    </div>
+	
+	<style>
+	/* Updated CSS */
+.about-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px; 
+    text-align: left; 
+}
+
+.about-text {
+    max-width: 1000px;
+}
+
+.about-text p {
+    margin-bottom: 10px;
+}
+</style>
+</section>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // You can handle form submission here with AJAX or by directly sending it to the server
+
+    // Show the pop-out message
+    alert('Thank you for your message! We will get back to you soon.');
+
+    // Optionally, you can reset the form fields
+    this.reset();
+});
+</script>
+
+
+<footer>
+    <div class="social-icons">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>&copy; 2024 Our Portfolio.All rights reserved.</p>
+</footer>
+</body>
+</html>

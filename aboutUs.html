@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Fonts -->
+
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Roboto Serif', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Navbar Styling */
+        nav {
+            width: 100%;
+            background-color: rgba(229, 230, 230, 0.7);
+            backdrop-filter: blur(10px);
+            transition: background-color 0.3s, backdrop-filter 0.3s;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #5d796a;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: rgba(229, 230, 230, 0.9);
+            border-radius: 5px;
+        }
+
+        /* Main Section Styling */
+        .about-main-outer {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .about-main-outer-upper h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2em;
+            color: #5d796a;
+        }
+
+        /* Profile Card Styling */
+        .about-main-outer-lower {
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* Space between cards */
+        }
+
+        .profile-card {
+            display: flex;
+            align-items: center; /* Center items vertically */
+            background-color: #fff;
+            color: #000;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 850px; /* Adjusted max width */
+            margin: 0 auto; /* Center the card horizontally */
+            padding: 20px; /* Added padding for better spacing */
+        }
+
+        .profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-card .photo {
+            flex: 0 0 150px; /* Increased from 120px to 150px */
+            width: 150px; /* Increased to match the flex-basis */
+            height: 150px; /* Increased height */
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Center image within the photo div */
+            background-color: #eaeaea; /* Optional: Add a background color for better aesthetics */
+            margin-right: 20px; /* Added space between photo and info */
+            border-radius: 50%; /* Optional: Make photos circular */
+        }
+
+        .profile-card .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%; /* Optional: Make photos circular */
+        }
+
+        .profile-card .info {
+            padding: 30px; /* Maintained increased padding */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1; /* Allow info section to take remaining space */
+        }
+
+        .profile-card .info h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.5em;
+            color: #000;
+        }
+
+        .profile-card .info p {
+            margin: 5px 0;
+            font-size: 1em;
+            color: #000;
+        }
+
+        .profile-card .info .resume-download {
+            margin-top: 15px;
+        }
+
+        .profile-card .info .resume-download a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #5d796a;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+
+        .profile-card .info .resume-download a:hover {
+            background-color: #467a5a;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333; /* Changed from #333 to a lighter color */
+            color: rgb(248, 244, 244); /* Updated text color for better contrast */
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 50px;
+        }
+
+        footer .social-icons {
+            margin: 10px 0;
+        }
+
+        footer .social-icons a {
+            color: rgb(11, 173, 160); /* Changed from white to match the overall color scheme */
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+
+        footer .social-icons a:hover {
+            color: #FFD700;
+        }
+
+        footer p {
+            margin: 10px 0 0;
+            font-size: 0.9em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .profile-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                width: 100%; /* Changed from max-width to width for better responsiveness */
+                padding: 15px; /* Adjusted padding for smaller screens */
+            }
+
+            .profile-card .photo {
+                width: 150px; /* Maintained increased size */
+                height: 150px;
+                margin-right: 0; /* Removed right margin */
+                margin-bottom: 15px; /* Added bottom margin for spacing */
+            }
+
+            .profile-card .info {
+                padding: 20px; /* Adjusted padding for smaller screens */
+            }
+
+            nav a {
+                padding: 10px 15px;
+            }
+        }
+    </style>
+
+    <!-- Optional: Include Font Awesome for Social Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="aboutUs.html">About Us</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    <!-- Header Section -->
+
+    <!-- About Us Section -->
+    <div class="about-main-outer">
+        <div class="about-main-outer-upper">
+            <h2>Our Group Member's Details</h2>
+        </div>
+        <div class="about-main-outer-lower">
+            <!-- Profile Card 1 -->
+            <div class="profile-card">
+                <div class="photo">
+                    <img src="asserts/professional photo.jpg" alt="Lahiru Madushan">
+                </div>
+                <div class="info">
+                    <h3>Lahiru Madushan</h3>
+                    <p><strong>Age:</strong> 32 Yrs</p>
+                    <p><strong>Course:</strong> Diploma in Computer Science</p>
+                    <p><strong>Country:</strong> Sri Lanka</p>
+                    <p><strong>Role:</strong> Student at INTI University</p>
+                    <p><strong>Skills:</strong> Java, Python, C++, HTML5, CSS, JavaScript, MySQL, MongoDB</p>
+                    <div class="resume-download">
+                        <a href="asserts/K.L madushan- Resume-latest.pdf" download>Download Resume</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Profile Card 2 -->
+            <div class="profile-card">
+                <div class="photo">
+                    <img src="asserts/ou yang-photo.jpg" alt="Ou Yang Jia Wen">
+                </div>
+                <div class="info">
+                    <h3>Ou Yang Jia Wen</h3>
+                    <p><strong>Age:</strong> 21 Yrs</p>
+                    <p><strong>Course:</strong> Diploma in Computer Science</p>
+                    <p><strong>Country:</strong> Malaysia</p>
+                    <p><strong>Role:</strong> Student at INTI University</p>
+                    <p><strong>Skills:</strong> Java, C++, HTML5, CSS, JavaScript, Xamarin</p>
+                    <div class="resume-download">
+                        <a href="asserts/OYJW.pdf" download>Download Resume</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Profile Card 3 -->
+            <div class="profile-card">
+                <div class="photo">
+                    <img src="asserts/wong-jin-photo.jpg" alt="Wong Jing En">
+                </div>
+                <div class="info">
+                    <h3>Wong Jing En</h3>
+                    <p><strong>Age:</strong> 22 Yrs</p>
+                    <p><strong>Course:</strong> Diploma in Computer Science</p>
+                    <p><strong>Country:</strong> Malaysia</p>
+                    <p><strong>Role:</strong> Student at INTI University</p>
+                    <p><strong>Skills:</strong> HTML Coding, Video Editing, Photo Editing, Graphic Design</p>
+                    <div class="resume-download">
+                        <a href="asserts/WJW.pdf" download>Download Resume</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Profile Card 4 -->
+            <div class="profile-card">
+                <div class="photo">
+                    <img src="asserts/JieXu.jpeg" alt="Chan Jie Xu">
+                </div>
+                <div class="info">
+                    <h3>Chan Jie Xu</h3>
+                    <p><strong>Age:</strong> 19 Yrs</p>
+                    <p><strong>Course:</strong> Diploma in Information Technology</p>
+                    <p><strong>Country:</strong> Malaysia</p>
+                    <p><strong>Role:</strong> Student at INTI University</p>
+                    <p><strong>Skills:</strong> Website Development, Content Creation, Video Editing</p>
+                    <div class="resume-download">
+                        <a href="asserts/CJX.pdf" download>Download Resume</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About Us Section -->
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2024 Our Portfolio.All rights reserved.</p>
+    </footer>
+    <!-- Footer Section -->
+</body>
+</html>

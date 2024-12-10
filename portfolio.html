@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Portfolio</title>
+    
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+    
+    <!--Styles-->
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f7f7f7;
+            color: #444;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            width: 100%;
+            background-color: rgba(229, 230, 230, 0.7);
+            backdrop-filter: blur(10px);
+            transition: background-color 0.3s, backdrop-filter 0.3s;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #5d796a;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: rgba(229, 230, 230, 0.7);
+        }
+        
+        
+        /* Footer Styling */
+        footer {
+            background-color: #333; /* Changed from #333 to a lighter color */
+            color: rgb(248, 244, 244); /* Updated text color for better contrast */
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 50px;
+        }
+
+        footer .social-icons {
+            margin: 10px 0;
+        }
+
+        footer .social-icons a {
+            color: rgb(11, 173, 160); /* Changed from white to match the overall color scheme */
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+
+        footer .social-icons a:hover {
+            color: #FFD700;
+        }
+
+        footer p {
+            margin: 10px 0 0;
+            font-size: 0.9em;
+        }
+        
+        
+        #portfolio {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        #portfolio h1 {
+            font-family: 'Cookie', cursive;
+            font-size: 5em;
+        }
+        .portfolio-grid {
+            display: flex;
+            gap: 100px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+            max-width: 400px;
+            flex: 1 1 calc(33.333% - 20px);
+        }
+        .card img, .card video {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card h3 {
+            margin: 15px 0;
+            padding: 0 15px;
+            font-size: 1.7em;
+        }
+        .card p {
+            padding: 0 15px 15px;
+            color: #777;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html"><b>Home</b></a>
+        <a href="aboutUs.html"><b>About Us</b></a>
+        <a href="portfolio.html"><b>Portfolio</b></a>
+        <a href="contact.html"><b>Contact Us</b></a>
+    </nav>
+
+    <section id="portfolio">
+        <h1>Explores for Our Works</h1>
+    <div class="portfolio-grid">
+        <div class="card">
+            <h3>Penny Juice Website<br></h3>
+			<p>This is a website redesigned for penny juice shop for the assignment of User Experience Subject.<br></p>
+            <iframe src="https://pennyjuicenewux.pages.dev" width="400px" height="240px"></iframe>
+        </div>
+        <div class="card">
+            <h3>Inventory Management System</h3>
+            <p>This is an inventory management system designed for the assignment in Java programming.</p>
+            <!--
+            <video controls autoplay muted loop>
+                <source src="asserts/inv.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            -->
+            <iframe width="650" height="400" src="https://www.youtube.com/embed/kpSsY-SaFrw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+
+        <div class="card">
+            <h3>Order Tracking System<br></h3>
+            <p>This is a Project created for online order tracking.</p>
+            <!--
+            <video controls autoplay muted loop>
+                <source src="../app/asserts/c.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+               -->
+               <iframe width="650" height="400" src="https://www.youtube.com/embed/JmBQnvqfii0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
+        </div>
+
+		<div class="card">
+            <h3>Website Development</h3>
+            <a href="https://myaisa.com/index.html" target="_blank" style="color: black;">AI Sales Automation Website<br></a>
+            <img src="asserts/aisa.png" alt="Project 1">
+        </div>
+
+        <div class="card">
+            <h3>Video Editing</h3>
+            <p>Company Training Trip</p>
+            <iframe width="650" height="400" src="https://www.youtube.com/embed/r7tGsylrpEI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
+        </div>
+
+        <div class="card">
+            <h3>Video Editing</h3>
+            <p>Video for Company Theme Song</p>
+            <iframe width="650" height="400" src="https://www.youtube.com/embed/FjLywMtsxiM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
+        </div>
+
+    </div>
+</section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2024 Our Portfolio.All rights reserved.</p>
+    </footer>
+    <!-- Footer Section -->
+</body>
+</html>
